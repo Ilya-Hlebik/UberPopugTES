@@ -1,0 +1,12 @@
+# Project exclude paths
+/Accounting/target/
+/API/target/
+/Gate/target/
+/TaskTracker/target/
+!.mvn/wrapper/maven-wrapper.jar
+.idea
+*.iws
+*.iml
+*.ipr
+/mvnw
+/mvnw.cmd
