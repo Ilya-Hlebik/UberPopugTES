@@ -11,10 +11,7 @@
 
     <artifactId>API</artifactId>
     <dependencies>
-        <dependency>
-            <groupId>com.github.briandilley.jsonrpc4j</groupId>
-            <artifactId>jsonrpc4j</artifactId>
-        </dependency>
+
     </dependencies>
 
 </project>

@@ -132,7 +132,7 @@ module.exports = {
   resolve: {
     alias: {
       '~': PATHS.src, // Example: import Dog from "~/assets/img/dog.jpg"
-      '@': `${PATHS.src}/js`, // Example: import Sort from "@/utils/sort.js"
+      '@': `${PATHS.src}/components`, // Example: import Sort from "@/utils/sort.js"
       vue$: 'vue/dist/vue.js'
     }
   },

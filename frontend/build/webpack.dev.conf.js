@@ -12,7 +12,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   devtool: 'cheap-module-eval-source-map',
   devServer: {
     contentBase: baseWebpackConfig.externals.paths.dist,
-    port: 8081,
+    historyApiFallback: true,
+    port: 8090,
     overlay: {
       warnings: true,
       errors: true
