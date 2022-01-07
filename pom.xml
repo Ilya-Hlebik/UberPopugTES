@@ -14,11 +14,11 @@
     </properties>
     <modules>
         <module>API</module>
-        <module>eureka-service</module>
-        <module>auth-service</module>
+        <module>eureka-server</module>
         <module>secured-service</module>
+        <module>gateway-server</module>
     </modules>
-   <parent>
+    <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
        <version>2.6.2</version>
@@ -26,9 +26,11 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-parent</artifactId>
-                <version>2.6.2</version>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

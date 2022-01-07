@@ -1,4 +1,4 @@
 FROM adoptopenjdk:11-jre-hotspot
-COPY target/securedservice-0.0.1-SNAPSHOT.jar /app/app.jar
+COPY target/secured-service-0.0.1-SNAPSHOT.jar /app/app.jar
 CMD ["java", "-jar", "/app/app.jar"]
 EXPOSE 9000

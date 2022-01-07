@@ -3,17 +3,18 @@
 echo "Performing a clean Maven build"
 ./mvnw clean package -DskipTests=true
 
-echo "Building the UAA"
-cd uaa
-docker build --tag scg-demo-uaa .
+echo "Building the Eureka server"
+cd eureka-server
+docker build --tag popug-eureka-server .
 cd ..
 
 echo "Building the Gateway"
-cd auth-service
-docker build --tag scg-demo-security-gateway .
+cd gateway-server
+docker build --tag popug-gateway-service .
 cd ..
 
 echo "Building the Service"
 cd secured-service
-docker build --tag scg-demo-secured-service .
+docker build --tag popug-secured-service .
 cd ..
+docker-compose up

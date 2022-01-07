@@ -1,24 +1,23 @@
 version: '3'
 services:
   uaa:
-    image: scg-demo-uaa:latest
-    container_name: uaa
+    image: popug-eureka-server:latest
+    container_name: eureka-server
     expose:
-      - "8090"
+      - "8761"
     ports:
-      - "8090:8090"
+      - "8761:8761"
   secured-service:
-    image: scg-demo-secured-service:latest
+    image: popug-secured-service:latest
     container_name: resource
     expose:
       - "9000"
+    depends_on:
+      - eureka-server
   gateway:
-    image: scg-demo-security-gateway:latest
-    container_name: gateway
-    expose:
-      - "8080"
+    image: popug-gateway-service:latest
+    container_name: gateway-service
     ports:
       - "8080:8080"
     depends_on:
-      - secured-service
-      - uaa
+      - eureka-server

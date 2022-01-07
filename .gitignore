@@ -1,8 +1,9 @@
 # Project exclude paths
-/Accounting/target/
 /API/target/
-/Gate/target/
-/TaskTracker/target/
+/eureka-server/target/
+/gateway-server/target/
+/secured-service/target/
+/frontend/node-modules/
 !.mvn/wrapper/maven-wrapper.jar
 .idea
 *.iws
