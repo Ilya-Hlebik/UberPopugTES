@@ -8,10 +8,15 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
+    <properties>
+        <feign-reactor.version>3.0.3</feign-reactor.version>
+    </properties>
     <artifactId>API</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <dependencies>
-
+        <dependency>
+            <groupId>com.playtika.reactivefeign</groupId>
+            <artifactId>feign-reactor-spring-configuration</artifactId>
+        </dependency>
     </dependencies>
-
 </project>

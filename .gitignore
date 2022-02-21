@@ -2,7 +2,7 @@
 /API/target/
 /eureka-server/target/
 /gateway-server/target/
-/secured-service/target/
+/task-tracker/target/
 /frontend/node-modules/
 !.mvn/wrapper/maven-wrapper.jar
 .idea

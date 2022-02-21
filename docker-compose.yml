@@ -1,15 +1,15 @@
 version: '3'
 services:
-  uaa:
+  eureka-server:
     image: popug-eureka-server:latest
     container_name: eureka-server
     expose:
       - "8761"
     ports:
       - "8761:8761"
-  secured-service:
-    image: popug-secured-service:latest
-    container_name: resource
+  task-tracker:
+    image: popug-task-tracker:latest
+    container_name: task-tracker
     expose:
       - "9000"
     depends_on:
@@ -21,3 +21,17 @@ services:
       - "8080:8080"
     depends_on:
       - eureka-server
+      - postgres
+  postgres:
+    image: postgres
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: catalizator
+      POSTGRES_USER: postgres
+    volumes:
+      - ./data/postgresql:/var/lib/postgresql
+      - ./pg-initdb.d:/docker-entrypoint-initdb.d
